@@ -12,4 +12,4 @@ RUN apt-get update && \
 
 
 ENTRYPOINT ["python3"]
-CDM ["manage.py", "runserver", "0.0.0.0:8080"]
+CMD ["manage.py", "runserver", "0.0.0.0:8080"]
