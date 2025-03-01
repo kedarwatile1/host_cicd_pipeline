@@ -11,5 +11,5 @@ RUN apt-get update && \
     cd devops
 
 
-ENDPOINT ["python3"]
+ENTRYPOINT ["python3"]
 CDM ["manage.py", "runserver", "0.0.0.0:8080"]
