@@ -9,8 +9,8 @@ WORKDIR /opt/app
 
 COPY ${artifact} app.jar
 
-RUN apt-get update 
-    apt-get install -y maven
+RUN apt-get update &&
+    apt-get install -y docker.io
 
 # This should not be changed
 ENTRYPOINT ["java","-jar","app.jar"]
