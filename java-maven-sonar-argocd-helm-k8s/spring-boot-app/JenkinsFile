@@ -16,7 +16,8 @@ pipeline {
      steps {
          sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && apt-get update'
          sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && apt-get install -y maven'
-
+        }
+      }
     stage('Build and Test') {
       steps {
         sh 'ls -ltr'
