@@ -76,6 +76,7 @@ pipeline {
                 cd ${GIT_REPO_NAME}
 
                 # Set Git user details inside the repo (local config)
+                sh 'git --version'
                 git config user.email "kedarwatile@gmail.com"
                 git config user.name "kedar watile"
 
