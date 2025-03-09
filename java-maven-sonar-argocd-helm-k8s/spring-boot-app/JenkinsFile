@@ -72,6 +72,7 @@ pipeline {
                 rm -rf ${GIT_REPO_NAME}
 
                 # Clone the repository
+                echo "cloning the repository=======================================" 
                 git clone --branch ${GIT_BRANCH} https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME}.git
                 cd ${GIT_REPO_NAME}
 
