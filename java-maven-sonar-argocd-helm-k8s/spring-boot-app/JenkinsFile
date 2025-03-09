@@ -74,20 +74,20 @@ pipeline {
             //    # Remove any existing repo to avoid conflicts
                // rm -rf ${GIT_REPO_NAME}
 
-                # Clone the repository
+            //    # Clone the repository
              // echo "cloning the repository=======================================" 
            //   git clone --branch ${GIT_BRANCH} https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME}.git
            //   cd ${GIT_REPO_NAME}
 
-                # Set Git user details inside the repo (local config)
+            //    # Set Git user details inside the repo (local config)
          //       sh 'git --version'
            //     git config user.email "kedarwatile@gmail.com"
             //    git config user.name "kedar watile"
 
-                # Update deployment file
+         //       # Update deployment file
               //  sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
                 
-                # Commit and push changes
+           //     # Commit and push changes
             //  git add java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
              // git commit -m "Update deployment image to version ${BUILD_NUMBER}"
            //   git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME}.git ${GIT_BRANCH}
